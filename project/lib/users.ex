@@ -1,10 +1,12 @@
 defmodule Users do
 
-   import Helpers.Format, only: [{:trim_text, 1}, {:reverse, 1}]
+   #import Helpers.Format, only: [{:trim_text, 1}, {:reverse, 1}]
+   #using alias
+   alias Helpers.Format, as: WhatEverNameYouWant
 
   def new(name, age) do
 
-     formatted_name = trim_text(name)
+     formatted_name = WhatEverNameYouWant.trim_text(name)
 
      %{name: formatted_name, age: age}
   end
