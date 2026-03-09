@@ -6,24 +6,26 @@ defmodule Games do
   def get_all do
     [
       %{name: "Diablo IV", in_stock: true, price: 10},
-      %{name: "Hitman", in_stock: true, price: 40},
-      %{name: "Cyberpunk 2077", in_stock: true, price: 30},
+      %{name: "Hitman", in_stock: false, price: 40},
+      %{name: "Cyberpunk 2077", in_stock: false, price: 30},
       %{name: "Final Fantasy VII", in_stock: true, price: 60},
       %{name: "God Of War", in_stock: true, price: 70}
     ]
   end
 
+  def games_not_in_stock do
+    Enum.filter(get_all(), fn game -> game.in_stock && game.price <= 50 end)
+  end
+
   def count([]), do: 0
 
-  def count([ head | tail ]) do
-
+  def count([head | tail]) do
     1 + count(tail)
   end
 
   def sum_price([]), do: 0
 
-  def sum_price([ head | tail ]) do
-
+  def sum_price([head | tail]) do
     head.price + sum_price(tail)
   end
 
