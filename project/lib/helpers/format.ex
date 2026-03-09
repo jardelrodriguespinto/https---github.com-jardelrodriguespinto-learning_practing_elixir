@@ -13,9 +13,9 @@ defmodule Helpers.Format do
     It does reverse a string
   """
   def reverse(text) do
-    String.reverse(text) |>
-    #IO.inspect()
-    dbg()
+    String.reverse(text)
+    # IO.inspect()
+    |> dbg()
   end
 
   def generate_slug(text) do
@@ -27,6 +27,7 @@ defmodule Helpers.Format do
     |> String.trim()
     |> String.downcase()
     |> String.replace(" ", "-")
+
     dbg()
   end
 end
