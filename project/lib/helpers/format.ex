@@ -1,5 +1,4 @@
 defmodule Helpers.Format do
-
   @moduledoc """
     Documentation for Helpers.Format
   """
@@ -10,7 +9,6 @@ defmodule Helpers.Format do
     String.trim(text)
   end
 
-
   @doc """
     It does reverse a string
   """
@@ -18,4 +16,14 @@ defmodule Helpers.Format do
     String.reverse(text)
   end
 
+  def generate_slug(text) do
+    #    String.replace(String.trim(String.downcase(text)), " ", "-")
+
+    # text |> String.trim() |> String.downcase() |> String.replace(" ", "-")
+
+    text
+    |> String.trim()
+    |> String.downcase()
+    |> String.replace(" ", "-")
+  end
 end
