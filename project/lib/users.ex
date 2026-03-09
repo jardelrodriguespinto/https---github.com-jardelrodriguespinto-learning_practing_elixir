@@ -1,6 +1,11 @@
 defmodule Users do
   # import Helpers.Format, only: [{:trim_text, 1}, {:reverse, 1}]
   # using alias
+
+  @enforce_keys [:name]
+  defstruct [:name, :email]
+
+
   alias Helpers.Format, as: WhatEverNameYouWant
 
   # using traditional if and else
