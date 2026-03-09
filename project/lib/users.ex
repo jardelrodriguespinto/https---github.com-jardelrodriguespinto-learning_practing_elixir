@@ -19,15 +19,15 @@ defmodule Users do
      %{name: "Jardel", age: age, is_cool: true, can_drink: true}
   end
 
-  def is_number_age(age) do
-    String.to_integer(age)
-  end
+  # def is_number_age(age) do
+  #   #String.to_integer(age)
+  # end
 
-  def new(name, age) when is_number_age(age) and age >= 18 do
-    formatted_name = WhatEverNameYouWant.trim_text(name)
+  # def new(name, age) when is_number_age(age) and age >= 18 do
+  #   formatted_name = WhatEverNameYouWant.trim_text(name)
 
-    %{name: formatted_name, age: age, is_cool: false, can_drink: true}
-  end
+  #   %{name: formatted_name, age: age, is_cool: false, can_drink: true}
+  # end
 
   def new(name, age) do
     formatted_name = WhatEverNameYouWant.trim_text(name)
