@@ -3,7 +3,7 @@ defmodule Users do
   # using alias
   alias Helpers.Format, as: WhatEverNameYouWant
 
-  #using traditional if and else
+  # using traditional if and else
   # def new(name, age) do
   #   formatted_name = WhatEverNameYouWant.trim_text(name)
 
@@ -15,8 +15,8 @@ defmodule Users do
   # end
 
   # using pattern matching
-  def new("Jardel", age)  do
-     %{name: "Jardel", age: age, is_cool: true, can_drink: true}
+  def new("Jardel", age) do
+    %{name: "Jardel", age: age, is_cool: true, can_drink: true}
   end
 
   # def is_number_age(age) do
@@ -38,6 +38,6 @@ defmodule Users do
   def new, do: generate_default_user()
 
   def generate_default_user do
-    %{name: "John Doe", age: 34,is_cool: false, can_drink: false}
+    %{name: "John Doe", age: 34, is_cool: false, can_drink: false}
   end
 end
