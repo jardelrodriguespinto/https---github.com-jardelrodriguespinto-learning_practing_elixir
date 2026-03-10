@@ -5,7 +5,6 @@ defmodule Users do
   @enforce_keys [:name]
   defstruct [:name, :email]
 
-
   alias Helpers.Format, as: WhatEverNameYouWant
 
   # using traditional if and else

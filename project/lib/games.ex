@@ -14,7 +14,7 @@ defmodule Games do
   end
 
   def games_not_in_stock do
-    Enum.filter(get_all(), & &1.in_stock && &1.price <= 50)
+    Enum.filter(get_all(), &(&1.in_stock && &1.price <= 50))
   end
 
   def games_not_in_stock do
