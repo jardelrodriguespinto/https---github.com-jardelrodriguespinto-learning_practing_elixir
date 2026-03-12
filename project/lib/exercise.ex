@@ -51,8 +51,108 @@ defmodule Exercise do
     sum_all_even(tail)
   end
 
-def first([]), do: nil
-def first([head | _tail]), do: head
+  def first([]), do: nil
+  def first([head | _tail]), do: head
 
+  def eh_par(number) do
+    rem(number, 2) == 0
+  end
+
+  def saudacao(nome) do
+    " Olá, #{nome}"
+  end
+
+  def primeiro([]), do: nil
+  def primeiro([head | _tail]), do: head
+
+  def ultimo([head | tail]) do
+    cond do
+      tail == [] -> head
+      true -> ultimo(tail)
+    end
+  end
+
+  def reverter([]), do: []
+
+  def reverter([head | tail]) do
+    reverter(tail) ++ [head]
+  end
+
+  def contar_pares([], result), do: result
+
+  def contar_pares([head | tail], result) do
+    cond do
+      rem(head, 2) == 0 -> contar_pares(tail, result + 1)
+      true -> contar_pares(tail, result)
+    end
+  end
+
+  def multiplicar([]), do: 1
+
+  def multiplicar([head | tail]) do
+    head * multiplicar(tail)
+  end
+
+  def multiplicar([head | tail]) do
+    head * multiplicar(tail)
+  end
+
+  def maior([], result), do: result
+
+  def maior([head | tail], result) do
+    IO.puts(result)
+    cond do
+      head >= result -> maior(tail, head)
+      true -> maior(tail, result)
+    end
+  end
+
+   def buscar([], result), do: result
+
+  def maior([head | tail], result) do
+    IO.puts(result)
+    cond do
+      head >= result -> maior(tail, head)
+      true -> maior(tail, result)
+    end
+  end
+
+  def somar_negativos([], result), do: result
+
+  def somar_negativos([head | tail], result) do
+    cond do
+      head < 0 ->
+         somar_negativos(tail, head + result)
+
+      true ->
+         head + somar_negativos(tail, result)
+
+    end
+  end
+
+  def somar_negativos([head | tail], result) do
+    cond do
+      head < 0 ->
+         somar_negativos(tail, head + result)
+
+      true ->
+         head + somar_negativos(tail, result)
+
+    end
+  end
+
+  def contar_impares([], result), do: result
+
+  def contar_impares([head | tail], result) do
+
+    cond do
+      rem(head, 2) != 0 ->
+         contar_impares(tail, result + 1)
+
+      true ->
+        contar_impares(tail, result)
+
+    end
+  end
 
 end
